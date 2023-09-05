@@ -1,36 +1,36 @@
 # Lab02_ClineThomasObjective
 
-Weíll be creating a small program that will display all the binary in an int. Weíll be manipulating the bits inside the integer 
+We‚Äôll be creating a small program that will display all the binary in an int. We‚Äôll be manipulating the bits inside the integer 
 and displaying them to the user. First, however, we should set up some global helper functions.
 
-You may also choose to declare your unsigned int bitField globally so all functions can use it, otherwise youíll have to add it 
+You may also choose to declare your unsigned int bitField globally so all functions can use it, otherwise you‚Äôll have to add it 
 as an additional parameter to all your helper functions and instead declare it in main. If you make it a parameter, ensure that 
 it is an unsigned int reference (&) so the original value can be changed, or that the function returns the result of the bit
 operation as an unsigned int so you can update the value of bitField in the main code that is calling the helper function.
 
-TurnOn(int bit) ñ 10 points
+TurnOn(int bit) ‚Äì 10 points
 
 This function should take in a number to determine which bit should be turned on. You may set this up to be the bit index (like 
 an array, but 0 would be the right-most, 1 would be the one to the left of that, etc) or you may have it represent the actual bit
 value itself (1, 2, 4, 8, 16, etc). Either method is fine, it just depends on how you choose to write your main code to decide 
 which number to pass as the parameter.
 
-HINT: ìorî |
+HINT: ‚Äúor‚Äù |
 
-TurnOff(int bit) ñ 10 points
+TurnOff(int bit) ‚Äì 10 points
 
 Similar to TurnOn, but instead ensure that specific bit is turned off.
 
-HINT: ìnegateî ~, ìandî &
+HINT: ‚Äúnegate‚Äù ~, ‚Äúand‚Äù &
 
-Toggle(int bit) ñ 10 points
+Toggle(int bit) ‚Äì 10 points
 
 As in the previous two, this function will toggle (0 becomes 1, 1 becomes 0) the specific bit. If checks do not need to be used
 to complete this method.
 
-HINT: ìxorî, aka ìexclusive orî ^.
+HINT: ‚Äúxor‚Äù, aka ‚Äúexclusive or‚Äù ^.
 
-Negate() ñ 10 points
+Negate() ‚Äì 10 points
 
 Invert all the bits using the negate operator. Since this is a unary (single parameter) operator, you do not need to know which
 bit to manipulate because it manipulates all of them. Loops do not need to be used to complete this method.
@@ -42,10 +42,10 @@ not require a specific bit to operate on as they shift the entire bit field.
 
 Using a loop, array, or vector in any of the above functions is incorrect and will result in a severe grading hit.
 
-Main.cpp ñ 40 points
+Main.cpp ‚Äì 40 points
 
 As mentioned prior, either declare your unsigned int bitField globally or at the top of main. Display the value of the bitField 
-normally and also print the on/off state of each of the 32 bits within the int. HINT: ìandî & can be used to test the value of a
+normally and also print the on/off state of each of the 32 bits within the int. HINT: ‚Äúand‚Äù & can be used to test the value of a
 bit. If your bitField is a regular signed int, issues can arise because the left-most 31st bit is reserved for the signed (+ or -)
 state of the int instead of an actual value.
 
